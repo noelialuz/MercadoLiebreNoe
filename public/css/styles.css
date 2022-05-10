@@ -356,7 +356,8 @@ footer i {
 
 }
 
-@media (min-width: 361px) {
+/*@media (min-width: 361px) {*/
+@media (min-width: 645px) {
 
     .producto{
         display: flex;
