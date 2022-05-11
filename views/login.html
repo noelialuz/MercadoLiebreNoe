@@ -16,26 +16,26 @@
             <div class="main_header">
                 <div class="main_header-top-bar">
                     <img class=logo src="/images/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre">
-                    <div class="buscador">
-                        <input type="search" id="search" placeholder="Buscar productos, marcas" />
-                        <span class="icon"><i class="fa fa-search"></i></span>
-                    </div>
+                    <form action="/home" method="GET" class="search-form">
+                        <input type="text" name="data-search" placeholder="Buscar productos, marcas y más" class="buscador">
+                        <button type="submit" class="lupa-img"><i class="fas fa-search"></i></button>
+                    </form>
                     <h2 class="copy-header"><i class="fas fa-solid fa-hand-holding-dollar"></i>Compra en cuotas y sin tarjeta de crédito</h2>
                 </div>
                 <nav class="main_header-botton-bar">
                     <div class = "menu">
                         <ul>
-                            <li><a href=>Ofertas</a></il>
-                            <li><a href=>Tiendas Oficiales</a></li>
-                            <li><a href="/crearProducto">Vender</a></li>
-                            <li><a href=>Ayuda</a></li>
+                            <li><a href="#">Ofertas</a></il>
+                            <li><a href="#">Tiendas Oficiales</a></li>
+                            <li><a href="#">Vender</a></li>
+                            <li><a href="#">Ayuda</a></li>
                         </ul>
                     </div>
                     <div class = "menu">
                         <ul>
                             <li><a href="/registro">Creá tu cuenta <i class="fas fa-solid fa-address-card"></i></a></li>
                             <li><a href="/login">Ingresá <i class="fas fa-solid fa-arrow-right-to-bracket"></i></a></li>
-                            <li><a href=>Mis compras <i class="fas fa-regular fa-bag-shopping"></i></a></li>
+                            <li><a href="#">Mis compras <i class="fas fa-regular fa-bag-shopping"></i></a></li>
                         </ul>
                     </div>
                 </nav>
@@ -44,14 +44,14 @@
                 </div>
             </div>
         </header>
-        <form action="/login" method="POST" class="create-form">
+        <form action="" method="POST" class="create-form">
             <div class="control-formulario">
-                <input type="text" name="user" required placeholder="Nombre de usuario" class="control">
+                <input type="text" name="user" placeholder="Nombre de usuario" class="control" required>
+                <input type="password" id="password" name="password" class="control" placeholder="Contraseña" required>
+                <button type="submit" class="boton-formulario">Envio</button>
             </div>
-            <input type="password" id="password" name="password" class="control" placeholder="Contraseña">
-            <button type="submit" class="boton-formulario">Ingresar</button>
         </form>
-        <footer>
+        <footer class="footer_login">
             <div class="footer-top">
                 <article>
                     <i class="fav fa-solid fa-credit-card"></i>

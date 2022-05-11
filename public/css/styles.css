@@ -36,11 +36,6 @@ header {
     top:0;
     z-index: 100;*/
 }
-.search-form{
-    position: relative;
-    display: flex;
-    align-items: center;
-}
 
 .buscador{
     border: solid 1px var(--light-gray);
@@ -52,7 +47,7 @@ header {
     font-size: 1.5em;
 }
 .lupa-img{
-    position: absolute;
+    position: relative;
     right: 2px;
     height: 60%;
     background-color: #ffffff;
@@ -60,6 +55,12 @@ header {
     border-left: solid 1px var(--light-gray);
     color: var(--gray);
     cursor: pointer;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
 }
 
 .main_header .logo {
@@ -136,6 +137,10 @@ main {
 .producto {
     margin: 10px;
     background-color: white;
+    display: block;
+}
+.producto:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 p {
@@ -167,10 +172,12 @@ h2 .titulares {
 
 .info-producto p {
     font-size: 18px;
+    margin-block: 10px;
 }
 
 .info-producto span {
     font-size: 16px;
+    margin-block: 10px;
 }
 
 .info-producto h3 {
@@ -212,6 +219,11 @@ main section article i {
     display: flex;
 }
 
+.fa-truck:hover {
+    transform: rotate(-90deg);
+    transition: 400ms;
+}
+
 section {
     display: flex;
     justify-content: center;
@@ -223,10 +235,9 @@ section {
 
 footer {
     text-align: center;
-    bottom:0;
     background-color: white;
-    bottom:0;
     position: relative;
+    bottom: 0;
 }
 
 footer i {
@@ -243,16 +254,27 @@ footer i {
     color: #96948E;
 }
 
+.footer_login{
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+}
+
 /*    ESTILOS DE LOS FORMULARIOS */
+
 
 .create-form {
     padding: 20px 15px;
-    margin-top: 150px;
-    
 }
+
 
 .control-formulario {
     margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
 
 }
 
@@ -260,12 +282,18 @@ footer i {
     margin-bottom: 5px;
     font-style: italic;
     display: block;
+    margin-block: 25px;
 }
 
 .control {
-    width: 100%;
+    width: 80%;
     padding: 10px 10px;
     margin: auto;
+    border-radius: 5px;
+    display: block;
+    justify-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .boton-formulario {
@@ -273,9 +301,19 @@ footer i {
     border: none;
     font: 20px;
     color: white;
-    padding: 5px 10px;
     border-radius: 5px;
-    text-align: center;
+    width: 80%;
+    padding: 10px 10px;
+    margin: auto;
+    border-radius: 5px;
+    display: block;
+    justify-items: center;
+    margin-block: 20px;
+}
+
+.boton-formulario:hover{
+    background-color: #0022AA;
+    transition: background-color 200ms;
 }
 
 .seccion_perfil {
@@ -283,15 +321,43 @@ footer i {
     justify-content: space-between;
 }
 
+.seccion_categorias{
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion_imagen{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seccion_fecha{
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion_fecha h4, .seccion_imagen h4, .seccion_categorias h4, .seccion_perfil h4 {
+    color: #96948E;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
 /* Media queries*/
 
 @media (min-width: 768px) {
     .info-producto h3 {
+        display: none;
+    }
+    .producto:hover .info-producto h3 {
         display: block;
     }
 
     .producto {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        display: block;
     }
 
     .burger-menu {
@@ -352,7 +418,30 @@ footer i {
         justify-content: space-between;
         flex-wrap: nowrap;
     }
+    .search-form {
+        left: 35px;
+        max-width: 600px;
+        padding: 8px 1px;
+        height: 56px;
+        position: flex;
+        flex-wrap: wrap;
+        z-index: 910;
+        will-change: left;
+        transition: left .15s ease-out;
+        top: 0;
+    }
+    .buscador{
+        position: relative;
+        box-sizing: border-box;
+        z-index: 915;
+        color: #333;
+        font-size: 16px;
+        width: 80%;
+        margin: 0;
 
+    }
+    
+    
 
 }
 
@@ -360,8 +449,15 @@ footer i {
 @media (min-width: 645px) {
 
     .producto{
-        display: flex;
+        display: block;
         flex-wrap: wrap;
         width: 40%;
+    }
+
+    .info-producto h3 {
+        display: none;
+    }
+    .producto:hover .info-producto h3 {
+        display: block;
     }
 }

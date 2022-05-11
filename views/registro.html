@@ -18,27 +18,27 @@
         <div class="main_header">
             <div class="main_header-top-bar">
                 <img class=logo src="/images/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre">
-                <div class="buscador">
-                    <input type="search" id="search" placeholder="Buscar productos, marcas" />
-                    <span class="icon"><i class="fa fa-search"></i></span>
-                </div>
+                <form action="/home" method="GET" class="search-form">
+                    <input type="text" name="data-search" placeholder="Buscar productos, marcas y más" class="buscador">
+                    <button type="submit" class="lupa-img"><i class="fas fa-search"></i></button>
+                </form>
                 <h2 class="copy-header"><i class="fas fa-solid fa-hand-holding-dollar"></i>Compra en cuotas y sin
                     tarjeta de crédito</h2>
             </div>
             <nav class="main_header-botton-bar">
                 <div class="menu">
                     <ul>
-                        <li><a href=>Ofertas</a></il>
-                        <li><a href=>Tiendas Oficiales</a></li>
-                        <li><a href="/crearProducto">Vender</a></li>
-                        <li><a href=>Ayuda</a></li>
+                        <li><a href="#">Ofertas</a></il>
+                        <li><a href="#">Tiendas Oficiales</a></li>
+                        <li><a href="#">Vender</a></li>
+                        <li><a href="#">Ayuda</a></li>
                     </ul>
                 </div>
                 <div class="menu">
                     <ul>
                         <li><a href="/registro">Creá tu cuenta <i class="fas fa-solid fa-address-card"></i></a></li>
                         <li><a href="/login">Ingresá <i class="fas fa-solid fa-arrow-right-to-bracket"></i></a></li>
-                        <li><a href=>Mis compras <i class="fas fa-regular fa-bag-shopping"></i></a></li>
+                        <li><a href="#">Mis compras <i class="fas fa-regular fa-bag-shopping"></i></a></li>
                     </ul>
                 </div>
             </nav>
@@ -60,33 +60,34 @@
         <div class="control-formulario">
             <input type="email" name="email" required placeholder="correo electrónico" class="control">
         </div>
-        <div class="control-formulario">
-            <h3>Fecha de nacimiento:</h3>
+        <div class="seccion_fecha">
+            <h4>Fecha de nacimiento:</h4>
             <input type="date" name="birth" required class="control">
         </div>
         <div class="control-formulario">
             <input type="text" name="address" required placeholder="Domicilio" class="control">
         </div>
-        </div>
         <div class="seccion_perfil">
-            <h3>Perfil del usuario</h3>
-            <label for="Vendedor">Vendedor <input type="radio" name="profileType" value="Vendedor"
-                class="control"></label>
-            <label for="Comprador">Comprador <input type="radio" name="profileType" value="Comprador"
-                class="control"></label>
+            <h4>Perfil del usuario</h4>
+            
+            <label for="Vendedor"><input type="radio" value="Vendedor" name="profileType"> Vendedor</label>
+            <label for="Comprador"></label><input type="radio" name="profileType" value="Comprador"> Comprador</label>
         </div>
         <div class="seccion_categorias">
-            <h3>Categorías de Interés</h3>
-            <label><input type="checkbox" name="categories" value="electro" class="control">Electro</label>
-            <label><input type="checkbox" name="categories" value="moda" class="control">Moda</label>
-            <label><input type="checkbox" name="categories" value="hogar" class="control">Hogar</label>
-            <label><input type="checkbox" name="categories" value="jugueteria" class="control">Juguetería</label>
-            <label><input type="checkbox" name="categories" value="vidaSana" class="control">Vida Sana</label>
+            <h4>Categorías de Interés</h4>
+            <label for="categories"><input type="checkbox" name="categories" value="electro"> Electro</label>
+            <label for="categories"><input type="checkbox" name="categories" value="moda"> Moda</label>
+            <label for="categories"><input type="checkbox" name="categories" value="hogar"> Hogar</label>
+            <label for="categories"><input type="checkbox" name="categories" value="jugueteria"> Juguetería</label>
+            <label for="categories"><input type="checkbox" name="categories" value="vidaSana"> Vida Sana</label>
         </div>
-        <h3>Ingresá tu foto</h3>
-        <input type="file" name="userImage" class="control">
-        <input type="password" id="password" name="password" class="control" placeholder="Contraseña">
-        <input type="password" id="checkPassword" name="checkPassword" class="control" placeholder="Repetir Contraseña">
+        <div class="seccion_imagen">
+            <h4>Ingresá tu foto</h4><input type="file" name="userImage" class="control">
+        </div>
+        <div class="seccion_password">
+            <input type="password" id="password" name="password" class="control" placeholder="Contraseña">
+            <input type="password" id="checkPassword" name="checkPassword" class="control" placeholder="Repetir Contraseña">
+        </div>
         <div class="botonera">
             <button type="submit" class="boton-formulario">Enviar</button>
             <button type="reset" class="boton-formulario">Borrar</button>
