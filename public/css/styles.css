@@ -257,7 +257,7 @@ footer i {
 .footer_login{
     text-align: center;
     background-color: white;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
@@ -441,6 +441,12 @@ footer i {
 
     }
     
+    .footer_login{
+        text-align: center;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+    }
     
 
 }
