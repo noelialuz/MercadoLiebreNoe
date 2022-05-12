@@ -278,6 +278,8 @@ footer i {
 
 .create-form {
     padding: 20px 15px;
+    max-width: 80%;
+    margin: auto;
 }
 
 
@@ -298,14 +300,13 @@ footer i {
 }
 
 .control {
-    width: 80%;
     padding: 10px 10px;
-    margin: auto;
     border-radius: 5px;
     display: block;
     justify-items: center;
     margin-top: 15px;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .boton-formulario {
@@ -314,7 +315,7 @@ footer i {
     font: 20px;
     color: white;
     border-radius: 5px;
-    width: 80%;
+    width: 40%;
     padding: 10px 10px;
     margin: auto;
     border-radius: 5px;
@@ -331,30 +332,56 @@ footer i {
 .seccion_perfil {
     display: flex;
     justify-content: space-between;
+    flex-direction: column ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tipo-perfil{
+    margin-right: 40px;
+    margin-left: 10px;
+}
+
+.radio-perfil{
+    align-self: center;
+}
+
+.opciones-perfil{
+ display: flex;
+
 }
 
 .seccion_categorias{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .seccion_imagen{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .seccion_fecha{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .seccion_fecha h4, .seccion_imagen h4, .seccion_categorias h4, .seccion_perfil h4 {
     color: #96948E;
-    margin-left: 10%;
+    width: 90%;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 90%;
+}
+
+.botonera{
+    display: flex;
 }
 
 /* Media queries*/
@@ -439,7 +466,10 @@ footer i {
         bottom: 0;
     }
     
-
+    /* forms*/
+    .create-form{
+        width: 50%;
+    }
 }
 
 /*@media (min-width: 361px) {*/

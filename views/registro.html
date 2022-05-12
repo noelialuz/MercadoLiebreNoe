@@ -18,7 +18,7 @@
         <div class="main_header">
             <div class="main_header-top-bar">
                 <img class=logo src="/images/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre">
-                <form action="/home" method="GET" class="search-form">
+                <form action="search" method="POST" class="search-form">
                     <input type="text" name="data-search" placeholder="Buscar productos, marcas y más" class="buscador">
                     <button type="submit" class="lupa-img"><i class="fas fa-search"></i></button>
                 </form>
@@ -69,9 +69,10 @@
         </div>
         <div class="seccion_perfil">
             <h4>Perfil del usuario</h4>
-            
-            <label for="Vendedor"><input type="radio" value="Vendedor" name="profileType"> Vendedor</label>
-            <label for="Comprador"></label><input type="radio" name="profileType" value="Comprador"> Comprador</label>
+            <div class="opciones-perfil">
+                <input type="radio" value="Vendedor" name="profileType" class="radio-perfil"><label for="Vendedor" class="tipo-perfil">Vendedor</label>
+                <input type="radio" name="profileType" value="Comprador" class="radio-perfil"> <label for="Comprador" class="tipo-perfil">Comprador</label>
+            </div>
         </div>
         <div class="seccion_categorias">
             <h4>Categorías de Interés</h4>
