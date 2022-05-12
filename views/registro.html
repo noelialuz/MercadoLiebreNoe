@@ -49,23 +49,23 @@
     </header>
     <form action="/registrarse" method="POST" class="create-form">
         <div class="control-formulario">
-            <input type="text" name="name" required placeholder="Nombre" class="control">
+            <input type="text" name="name" required placeholder="Nombre" class="control" required>
         </div>
         <div class="control-formulario">
-            <input type="text" name="surname" required placeholder="Apellido" class="control">
+            <input type="text" name="surname" required placeholder="Apellido" class="control" required>
         </div>
         <div class="control-formulario">
-            <input type="text" name="user" required placeholder="Nombre de usuario" class="control">
+            <input type="text" name="user" required placeholder="Nombre de usuario" class="control" required>
         </div>
         <div class="control-formulario">
-            <input type="email" name="email" required placeholder="correo electrónico" class="control">
+            <input type="email" name="email" required placeholder="correo electrónico" class="control" required>
         </div>
         <div class="seccion_fecha">
             <h4>Fecha de nacimiento:</h4>
-            <input type="date" name="birth" required class="control">
+            <input type="date" name="birth" required class="control" required>
         </div>
         <div class="control-formulario">
-            <input type="text" name="address" required placeholder="Domicilio" class="control">
+            <input type="text" name="address" required placeholder="Domicilio" class="control" required>
         </div>
         <div class="seccion_perfil">
             <h4>Perfil del usuario</h4>
@@ -86,8 +86,8 @@
             <h4>Ingresá tu foto</h4><input type="file" name="userImage" class="control">
         </div>
         <div class="seccion_password">
-            <input type="password" id="password" name="password" class="control" placeholder="Contraseña">
-            <input type="password" id="checkPassword" name="checkPassword" class="control" placeholder="Repetir Contraseña">
+            <input type="password" id="password" name="password" class="control" placeholder="Contraseña" required>
+            <input type="password" id="checkPassword" name="checkPassword" class="control" placeholder="Repetir Contraseña" required>
         </div>
         <div class="botonera">
             <button type="submit" class="boton-formulario">Enviar</button>
