@@ -235,9 +235,9 @@ main section article i {
     display: flex;
 }
 
-.fa-truck:hover {
+.info-producto:hover .fa-truck {
     transform: rotate(-90deg);
-    transition: 400ms;
+    transition: 500ms;
 }
 
 section {
