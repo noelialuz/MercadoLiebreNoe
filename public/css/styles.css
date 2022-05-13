@@ -166,6 +166,8 @@ ul {
 
 .info-producto span{
     color: var(--Verde);
+    margin-left: 10px;
+    align-self: center;
 }
 
 h2 .titulares {
